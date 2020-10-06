@@ -3,8 +3,17 @@ import axios from 'axios'; // convention to put imports from 3rd party packages 
 import SearchBar from './SearchBar'
 
 class App extends React.Component {
-  onSearchSubmit(searchTerm) {
+  async onSearchSubmit(searchTerm) {
     // API request to unsplash goes here!
+    const response = await axios.get('https://api.unsplash.com/search/photos', {
+      params: { query: searchTerm},
+      headers: {
+        Authorization: 'Client-ID GHsPykq_WOuKAe4ruG1ef81xW-Tus9k9TuzXp-baUH4'
+      }
+    }).then((response) => { // promise based syntax
+      // data that we've gotten back from unsplash api
+      console.log(response.data.results)
+    });
   }
 
   render () {
