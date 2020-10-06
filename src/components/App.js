@@ -1,9 +1,10 @@
 import React from 'react';
+import axios from 'axios'; // convention to put imports from 3rd party packages above files we've created
 import SearchBar from './SearchBar'
 
 class App extends React.Component {
   onSearchSubmit(searchTerm) {
-    console.log(searchTerm)
+    // API request to unsplash goes here!
   }
 
   render () {
