@@ -1,6 +1,7 @@
 import React from 'react';
 import unsplash from '../api/unsplash'; // convention to put imports from 3rd party packages above files we've created
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar';
+import ImageList from './ImageList'
 
 class App extends React.Component {
   state = { images: [] }; // empty array as we're expecting a list of images
@@ -16,7 +17,7 @@ class App extends React.Component {
     return (
     <div className="ui container" style={{ marginTop: '16px' }}>
       <SearchBar onSubmit={this.onSearchSubmit}/>
-      Found: {this.state.images.length} images
+      <ImageList images={this.state.images}/>
     </div>
       );
   };
