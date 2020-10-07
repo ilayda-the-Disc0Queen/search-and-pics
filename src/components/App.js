@@ -21,6 +21,6 @@ class App extends React.Component {
     </div>
       );
   };
-} {/* DO NOT ADD ; TO LAST BRACKET IN A CLASS*/}
+}
 
 export default App;
